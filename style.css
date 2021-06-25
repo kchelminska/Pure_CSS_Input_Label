@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(146, 191, 202);
+}
+
+.container {
+    width: 70vh;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
+}
+
+.form-group:first-of-type {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    transition: 0.3s;
+}
+
+.form-label {
+    font-size: 1.5em;
+    color: #aaa;
+    display: block;
+    opacity: 1;
+    transform: translateY(-1.3em);
+    transform-origin: 0, 0;
+    transition: .3s;
+    width: 35%;
+}
+
+.form-controle {
+    box-shadow: none;
+    border-radius: 0px;
+    border-color: #ccc;
+    border-style: none none solid none;
+    background-color: rgba(0, 0, 0, .03);
+    width: 100%;
+    transition: .6s;
+    padding: 5px;
+}
+
+.form-controle::placeholder {
+    color: transparent;
+}
+
+.form-controle:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: orange;
+}
+
+.form-controle:focus+.form-label {
+    transform: translateY(-40px);
+    font-size: 1em;
+    color: orange;
+    font-weight: bold;
+}
+
+.form-controle:not(:placeholder-shown)+.form-label {
+    transform: translateY(-40px);
+    font-size: 1em;
+}
+
+.form-group:focus-within {
+    transform: scale(1.05);
+}
